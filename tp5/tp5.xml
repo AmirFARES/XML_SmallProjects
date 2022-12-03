@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE films[
+    <!ELEMENT films (film+)>
+    <!ELEMENT film (photo?,titre,annee,realisateur,casting,synopsis)>
+    <!ATTLIST film lang (ar|kor|fr|en) #REQUIRED>
+    <!ELEMENT photo EMPTY>
+    <!ATTLIST photo href CDATA #REQUIRED>
+    <!ELEMENT casting (acteur*)>
+    <!ELEMENT acteur (#PCDATA)>
+    <!ATTLIST acteur id ID #IMPLIED
+        personage CDATA #REQUIRED>
+    <!ELEMENT synopsis (#PCDATA|perso)*>
+    <!ELEMENT perso EMPTY>
+    <!ATTLIST perso ref IDREF #REQUIRED>
+    <!ELEMENT titre (#PCDATA)>
+    <!ELEMENT annee (#PCDATA)>
+    <!ELEMENT realisateur (#PCDATA)>
+]>
+<?xml-stylesheet href="styles.css" type="text/css"?>
+
+<films>
+    <film lang="kor">
+        <photo href="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Parasite_%282019_film%29.png/220px-Parasite_%282019_film%29.png"/>
+        <titre>Parasite</titre>
+        <annee>2019</annee>
+        <realisateur>Bong Joon Ho</realisateur>
+        <casting>
+            <acteur personage="Ki Taek">Kang-ho Song</acteur>
+            <acteur personage="Dong Ik">Sun-kyun Lee</acteur>
+            <acteur personage="Yeon Kyo">Yeo-jeong Cho</acteur>
+            <acteur personage="Ki Woo">Woo-sik Choi</acteur>
+            <acteur personage="Ki Jung">So-dam Park</acteur>
+            <acteur personage="Moon Gwang">Lee Jeong-eun</acteur>
+            <acteur personage="Chung Sook">Hye-jin Jang</acteur>
+        </casting>
+        <synopsis>The film follows a poor family who scheme to become employed by a wealthy family and infiltrate their household by posing as unrelated, highly qualified individuals.</synopsis>
+    </film>
+    <film lang="en">
+        <photo href="https://upload.wikimedia.org/wikipedia/en/f/fe/1917_%282019%29_Film_Poster.jpeg"/>
+        <titre>1917</titre>
+        <annee>2019</annee>
+        <realisateur>Sam Mendes</realisateur>
+        <casting>
+            <acteur id="DeaCharles" personage="Lance Corporal Blake">Dean-Charles Chapman</acteur>
+            <acteur id="geoMac" personage="Lance Corporal Schofield">George MacKay</acteur>
+            <acteur personage="Sergeant Sanders">Daniel Mays</acteur>
+            <acteur personage="General Erinmore">Colin Firth</acteur>
+            <acteur personage="Lieutenant Gordon">Pip Carter</acteur>
+            <acteur personage="Sergeant Miller">Andy Apollo</acteur>
+            <acteur personage="NCO Baker">Paul Tinto</acteur>
+
+        </casting>
+        <synopsis>The most important thing about the film is a one-shot film ,takes place after the German retreat to the Hindenburg Line during Operation Alberich, and follows two British soldiers, <perso ref="geoMac" /> and <perso ref="DeaCharles" />, in their mission to deliver an important message to call off a doomed offensive attack.</synopsis>
+    </film>
+    <film lang="en">
+        <photo href="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"/>
+        <titre>Joker</titre>
+        <annee>2019</annee>
+        <realisateur>Todd Phillips</realisateur>
+        <casting>
+            <acteur id="joker" personage="Arthur Fleck">Joaquin Phoenix</acteur>
+            <acteur personage="Murray Franklin">Robert De Niro</acteur>
+            <acteur personage="Sophie Dumond">Zazie Beetz</acteur>
+            <acteur personage="Penny Fleck">Frances Conroy</acteur>
+            <acteur personage="Thomas Wayne">Brett Cullen</acteur>
+            <acteur personage="Detective Burke">Shea Whigham</acteur>
+            <acteur personage="Detective Garrity">Bill Camp</acteur>
+        </casting>
+        <synopsis>The film, based on DC Comics characters, stars <perso ref="joker" /> as The Joker and provides an alternative origin story for the character. Set in 1981, it follows <perso ref="joker" />, a failed clown and stand-up comedian whose descent into insanity and nihilism inspires a violent counter-cultural revolution against the wealthy in a decaying Gotham City.</synopsis>
+    </film>
+</films>

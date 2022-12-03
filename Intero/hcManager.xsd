@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- //////////////////////////////////// Amir FARES G02 //////////////////////////////////// -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  
+  <xs:complexType name="Tmalade">
+    <xs:sequence>
+      <xs:element name="nom" type="xs:string"/>
+      <xs:element name="prenom" type="xs:string"/>
+      <xs:element name="dateDeNaissance" type="xs:date"/>
+      <xs:element name="sexe" type="Tsexe"/>
+      <xs:element name="adresse" type="xs:string"/>
+      <xs:element name="numTelephone" type="TnumPhone"/><!--num de telephone portable-->
+    </xs:sequence>
+    <xs:attribute name="idMalade" type="TmaladeID" use="required"/>  
+  </xs:complexType>
+  <xs:simpleType name="TnumPhone">
+    <xs:restriction base="xs:int">
+      <xs:pattern value="0[5-7][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Tsexe">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="M"/>
+      <xs:enumeration value="F"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TmaladeID">
+    <xs:restriction base="xs:ID">
+      <xs:pattern value="M-[0-9]{1,5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Tconsultation">
+    <xs:sequence>
+      <xs:element name="commentaire" type="xs:string"/>
+      <xs:element name="dateDeConsultation" type="xs:date"/>
+    </xs:sequence>
+    <xs:attribute name="idConsultation" type="xs:ID" use="required"/>  
+    <xs:attribute name="maladeRef" type="xs:IDREF" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="Ttraitement">
+    <xs:sequence>
+      <xs:element name="nomDeMedicament" type="xs:string"/>
+      <xs:element name="raisonDeMedicament" type="xs:string"/>
+      <xs:element name="dosage" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="idTraitement" type="xs:ID" use="required"/>  
+    <xs:attribute name="consultationRef" type="xs:IDREF" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="Tanalyse">
+    <xs:sequence>
+      <xs:element name="resultat" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="idAnalyse" type="xs:ID" use="required"/>  
+    <xs:attribute name="consultationRef" type="xs:IDREF" use="required"/>
+  </xs:complexType>
+  
+
+  <xs:element name="dossiers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="malades">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="malade" type="Tmalade" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="consultations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="consultation" type="Tconsultation" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="traitements">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="traitement" type="Ttraitement" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="analyses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="analyse" type="Tanalyse" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

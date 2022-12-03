@@ -1,0 +1,36 @@
+<!-- //////////////////////////////////// Amir FARES G02 //////////////////////////////////// -->
+<!-- ce fichier ne contient aucune erreur une erreur apparaît uniquement à partir de l'éditeur -->
+<!DOCTYPE dossiers[
+    <!ELEMENT dossiers (malades,consultations,traitements,analyses)>
+    <!ELEMENT malades (malade*)>
+    <!ELEMENT consultations (consultation*)>
+    <!ELEMENT traitements (traitement*)>
+    <!ELEMENT analyses (analyse*)>
+    <!-- malade-->
+    <!ELEMENT malade (nom,prenom,dateDeNaissance,sexe,adresse,numTelephone)>
+    <!ATTLIST malade idMalade ID #REQUIRED>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT prenom (#PCDATA)>
+    <!ELEMENT dateDeNaissance (#PCDATA)>
+    <!ELEMENT sexe (M|F)>
+    <!ELEMENT adresse (#PCDATA)>
+    <!ELEMENT numTelephone (#PCDATA)>
+    <!-- consultation-->
+    <!ELEMENT consultation (commentaire,dateDeConsultation)>
+    <!ATTLIST consultation idConsultation ID #REQUIRED
+                    maladeRef IDREF #REQUIRED>
+    <!ELEMENT commentaire (#PCDATA)>
+    <!ELEMENT dateDeConsultation (#PCDATA)>
+    <!-- traitement-->
+    <!ELEMENT traitement (nomDeMedicament,raisonDeMedicament,dosage)>
+    <!ATTLIST traitement idTraitement ID #REQUIRED
+                    consultationRef IDREF #REQUIRED>
+    <!ELEMENT nomDeMedicament (#PCDATA)>
+    <!ELEMENT raisonDeMedicament (#PCDATA)>
+    <!ELEMENT dosage (#PCDATA)>
+    <!-- analyse-->
+    <!ELEMENT analyse (resultat)>
+    <!ATTLIST analyse idAnalyse ID #REQUIRED
+                    consultationRef IDREF #REQUIRED>
+    <!ELEMENT resultat (#PCDATA)>
+]>

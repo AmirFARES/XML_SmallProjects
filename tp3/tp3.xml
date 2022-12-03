@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<depot>
+    <euaMinerale1><!-- marque1-->
+        <nom>Bouglez</nom>
+        <bouteilleQuantity>1.5L</bouteilleQuantity>
+        <compositionChimique>
+            <cations><!-- ions positifs-->
+                <calcium>4.8 mg/l</calcium>
+                <magnesium>3.75 mg/l</magnesium>
+                <sodium>29 mg/l</sodium>
+                <potassium>1 mg/l</potassium>
+            </cations>
+            <anions><!-- ions negatifs-->
+                <chlorure>30 mg/l</chlorure>
+                <sulfate>10 mg/l</sulfate>
+                <nitrate>9 mg/l</nitrate>
+                <nitrite>0.06 mg/l</nitrite>
+            </anions>
+        </compositionChimique>
+        <phLvl>6.87</phLvl>
+        <codeBarre>6130576000020</codeBarre>
+        <sourceInfo>
+            <nomDeSource>Ain Bouglez</nomDeSource>
+            <commune>commune de Boutheldja</commune>
+            <wilaya>Taref</wilaya>
+        </sourceInfo>
+        <responsableDeProduction>
+            <nomDeResponsable>S.A.R.L Salsabil</nomDeResponsable>
+            <adresseEamil>contact@bouglez-dz.com</adresseEamil>
+            <numeroTelephone>0698315655</numeroTelephone>
+        </responsableDeProduction>
+    </euaMinerale1>
+    <euaMinerale2><!-- marque2-->
+        <nom>Youkous</nom>
+        <bouteilleQuantity>1.5L</bouteilleQuantity>
+        <compositionChimique>
+            <cations><!-- ions positifs-->
+                <calcium>77.4 mg/l</calcium>
+                <magnesium>14.5 mg/l</magnesium>
+                <sodium>13.4 mg/l</sodium>
+                <potassium>4.65 mg/l</potassium>
+            </cations>
+            <anions><!-- ions negatifs-->
+                <chlorure>25.7 mg/l</chlorure>
+                <sulfate>35.8 mg/l</sulfate>
+                <nitrate>2 mg/l</nitrate>
+                <nitrite>0 mg/l</nitrite>
+            </anions>
+        </compositionChimique>
+        <phLvl>7.4</phLvl>
+        <codeBarre>6130686000170</codeBarre>
+        <sourceInfo>
+            <nomDeSource>YOUKOUS</nomDeSource>
+            <commune>Hammamet</commune>
+            <wilaya>Tebessa</wilaya>
+        </sourceInfo>
+        <responsableDeProduction>
+            <nomDeResponsable>S.A.R.L BAALOUDJ &amp; FILS UNITE DE PRODUCTION HAMMAMET</nomDeResponsable>
+            <adresseEamil>youkous@gmail.com</adresseEamil>
+            <numeroTelephone>037521030</numeroTelephone>
+        </responsableDeProduction>
+    </euaMinerale2>
+    <euaMinerale3><!-- marque3-->
+        <nom>ifri</nom>
+        <bouteilleQuantity>1.5L</bouteilleQuantity>
+        <compositionChimique>
+            <cations><!-- ions positifs-->
+                <calcium>99 mg/l</calcium>
+                <magnesium>24 mg/l</magnesium>
+                <sodium>15.8 mg/l</sodium>
+                <potassium>2.1 mg/l</potassium>
+            </cations>
+            <anions><!-- ions negatifs-->
+                <chlorure>72 mg/l</chlorure>
+                <sulfate>68 mg/l</sulfate>
+                <nitrate>15 mg/l</nitrate>
+                <nitrite>&lt;0.02 mg/l</nitrite>
+            </anions>
+        </compositionChimique>
+        <phLvl>7.2</phLvl>
+        <codeBarre>6130093010069</codeBarre>
+        <sourceInfo>
+            <nomDeSource>ifri</nomDeSource>
+            <commune>Ighzer Amokrane Ifri Ouzellaguen 06010</commune>
+            <wilaya>Bejaia</wilaya>
+        </sourceInfo>
+        <responsableDeProduction>
+            <nomDeResponsable>S.A.R.L IBRAHIM &amp; Fils - Ifri</nomDeResponsable>
+            <adresseEamil>contact@ifri-dz.com</adresseEamil>
+            <numeroTelephone>034332652</numeroTelephone>
+        </responsableDeProduction>
+    </euaMinerale3>
+</depot>

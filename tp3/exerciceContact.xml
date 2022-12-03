@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+    <personne nom="np1" prenom="pp1">
+        <numTelephone>0611111111</numTelephone>
+        <email>p1@gmail.com</email>
+        <adresse>tebessa-p1</adresse>
+    </personne>
+    <personne nom="np2" prenom="pp2">
+        <numTelephone>0622222222</numTelephone>
+        <email>p2@gmail.com</email>
+        <adresse>tebessa-p2</adresse>
+    </personne>
+    <personne nom="np3" prenom="pp3">
+        <numTelephone>0633333333</numTelephone>
+        <email>p3@gmail.com</email>
+        <adresse>tebessa-p3</adresse>
+    </personne>
+    <personne nom="np4" prenom="pp4">
+        <numTelephone>0644444444</numTelephone>
+        <email>p4@gmail.com</email>
+        <adresse>tebessa-p4</adresse>
+    </personne>
+</contacts>

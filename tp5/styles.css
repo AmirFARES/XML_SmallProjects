@@ -1,0 +1,25 @@
+films{
+    background-color: rgb(194, 194, 194);
+}
+film{
+    white-space: pre-line;
+    background-color: rgb(73, 155, 209);
+}
+titre{
+    background-color:rgb(94, 75, 179);
+    font-size: larger;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    margin: 50px;
+}
+acteur{
+    margin-left: 25px;
+}
+realisateur{
+    border-style: solid;
+    border-width: 1px;
+    padding-left:2px;
+    padding-right:2px;
+}

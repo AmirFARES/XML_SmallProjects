@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE dossiers SYSTEM "hcManager.dtd"> -->
+<?xml-stylesheet type="text/css" href="hcManager.css"?>
+<dossiers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hcManager.xsd">
+<!--//////////////////////////////////// Amir FARES G02 ////////////////////////////////////-->
+    <!-- L'information n'est pas vraie et ne doit pas être prise au sérieux -->
+    <!-- ce module est issu de notre PFE avec quelques modifications -->
+    <malades>
+        <malade idMalade="M-1">
+            <nom>FARES</nom>
+            <prenom>Amir</prenom>
+            <dateDeNaissance>2000-11-15</dateDeNaissance>
+            <sexe>M</sexe>
+            <adresse>BirElAter Tebessa Algeria</adresse>
+            <numTelephone>0658221970</numTelephone>
+        </malade>
+        <malade idMalade="M-2">
+            <nom>STAND</nom>
+            <prenom>Mike</prenom>
+            <dateDeNaissance>1995-10-05</dateDeNaissance>
+            <sexe>M</sexe>
+            <adresse>Alger Algerie</adresse>
+            <numTelephone>0612131415</numTelephone>
+        </malade>
+    </malades>
+    <consultations>
+        <consultation idConsultation="C1" maladeRef="M-1">
+            <commentaire>aucun information</commentaire>
+            <dateDeConsultation>2021-05-19</dateDeConsultation>
+        </consultation>
+        <consultation idConsultation="C2" maladeRef="M-1">
+            <commentaire>Un peu de toux</commentaire>
+            <dateDeConsultation>2021-04-10</dateDeConsultation>
+        </consultation>
+        <consultation idConsultation="C3" maladeRef="M-2">
+            <commentaire>covid symptoms</commentaire>
+            <dateDeConsultation>2021-04-10</dateDeConsultation>
+        </consultation>
+    </consultations>
+    <traitements>
+        <traitement idTraitement="T1" consultationRef="C2">
+            <nomDeMedicament>Mentex</nomDeMedicament>
+            <raisonDeMedicament>toux</raisonDeMedicament>
+            <dosage>(15 ml*3)/jour</dosage>
+        </traitement>
+        <traitement idTraitement="T2" consultationRef="C2">
+            <nomDeMedicament>Toplexil</nomDeMedicament>
+            <raisonDeMedicament>toux</raisonDeMedicament>
+            <dosage>(5 ml*2)/jour</dosage>
+        </traitement>
+        <traitement idTraitement="T3" consultationRef="C3">
+            <nomDeMedicament>Equate Acetaminophen</nomDeMedicament>
+            <raisonDeMedicament>covid symptoms</raisonDeMedicament>
+            <dosage>2/jour</dosage>
+        </traitement>
+        <traitement idTraitement="T4" consultationRef="C3">
+            <nomDeMedicament>Mucinex</nomDeMedicament>
+            <raisonDeMedicament>covid symptoms</raisonDeMedicament>
+            <dosage>3/jour</dosage>
+        </traitement>
+        <traitement idTraitement="T5" consultationRef="C3">
+            <nomDeMedicament>Chloracétique Max</nomDeMedicament>
+            <raisonDeMedicament>covid symptoms</raisonDeMedicament>
+            <dosage>3/jour</dosage>
+        </traitement>
+    </traitements>
+    <analyses>
+        <analyse idAnalyse="A1" consultationRef="C3">
+            <resultat>
+                aka serology "Positive"
+            </resultat>
+        </analyse>
+    </analyses>
+</dossiers>
